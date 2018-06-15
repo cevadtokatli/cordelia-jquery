@@ -1,0 +1,34 @@
+{
+  "name": "cordelia-jquery",
+  "version": "1.0.0",
+  "description": "Color picker for web and mobile browsers",
+  "keywords": ["javascript", "jquery", "colorpicker"],
+  "author": {
+    "name": "Cevad Tokatli",
+    "email": "cevadtokatli@hotmail.com",
+    "url": "http://cevadtokatli.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cevadtokatli/cordelia-jquery"
+  },
+  "files": [
+    "css",
+    "js",
+    "icons"
+  ],
+  "license": "MIT",
+  "main": "js/cordelia.min.js",
+  "scripts": {
+    "build:js": "uglifyjs js/cordelia.js -c -m --comments /cordelia-jquery/ -o js/cordelia.min.js",
+    "build:css": "uglifycss css/cordelia.css > css/cordelia.min.css",
+    "build": "npm run build:js && npm run build:css"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "uglifycss": "^0.0.29",
+    "uglify-js": "^3.3.21"
+  }
+}
